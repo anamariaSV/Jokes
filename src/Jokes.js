@@ -9,11 +9,11 @@ export default class Jokes extends React.Component {
         }
      }
 
-     componentDidMount(){
+     componentDidMount = () =>{
          this.getApi();
      }
         
-     getApi=()=> {
+     getApi = ()=> {
          fetch('https://official-joke-api.appspot.com/random_joke')
          .then(response => response.json())
          .then(data => this.setState({joke: data}));
